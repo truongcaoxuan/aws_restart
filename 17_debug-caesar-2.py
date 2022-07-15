@@ -24,6 +24,7 @@ def getCipherKey():
 def encryptMessage(message, cipherKey, alphabet):
     encryptedMessage = ""
     uppercaseMessage = ""
+    # BUG HERE <===============================================================
     # uppercaseMessage = message
     uppercaseMessage = message.upper()
     for currentCharacter in uppercaseMessage:

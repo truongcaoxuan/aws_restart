@@ -28,6 +28,7 @@ def encryptMessage(message, cipherKey, alphabet):
     uppercaseMessage = message.upper()
     for currentCharacter in uppercaseMessage:
         position = alphabet.find(currentCharacter)
+        # BUG HERE <===============================================================
         # newPosition = position + cipherKey
         newPosition = int(position) + int(cipherKey)
         if currentCharacter in alphabet:

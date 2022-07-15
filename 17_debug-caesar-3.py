@@ -37,6 +37,7 @@ def encryptMessage(message, cipherKey, alphabet):
 # Decrypt message
 def decryptMessage(message, cipherKey, alphabet):
     decryptKey = -1 * int(cipherKey)
+    # BUG HERE <===============================================================
     # return encryptMessage(message, cipherKey, alphabet)
     return encryptMessage(message, decryptKey, alphabet)
 
