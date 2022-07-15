@@ -26,27 +26,23 @@ print("amino acids in the sequence of human preproinsulin")
 print("---------------------------------------------------")
 print (human_preproinsulin)
 print("---------------------------------------------------")
+
 # save the amino acids : 110 characters
-f1 = open('files/preproinsulin-seq-clean.txt','w')
-f1.write(human_preproinsulin[:])
-f1.close()
+with open('files/preproinsulin-seq-clean.txt','w') as f1:
+    f1.write(human_preproinsulin[:])
 
 # save amino acids 1–24 : 24 characters.
-f1 = open('files/lsinsulin-seq-clean.txt','w')
-f1.write(human_preproinsulin[0:24])
-f1.close()
+with open('files/lsinsulin-seq-clean.txt','w') as f1:
+    f1.write(human_preproinsulin[0:24])
 
 # save amino acids 25–54 : 30 characters.
-f1 = open('files/binsulin-seq-clean.txt','w')
-f1.write(human_preproinsulin[24:55])
-f1.close()
+with open('files/binsulin-seq-clean.txt','w') as f1:
+    f1.write(human_preproinsulin[24:55])
 
 # save amino acids 55–89 : 35 characters.
-f1 = open('files/cinsulin-seq-clean.txt','w')
-f1.write(human_preproinsulin[54:90])
-f1.close()
+with open('files/cinsulin-seq-clean.txt','w') as f1:
+    f1.write(human_preproinsulin[54:90])
 
 # save amino acids 90–110 : 21 characters.
-f1 = open('files/ainsulin-seq-clean.txt','w')
-f1.write(human_preproinsulin[89:111])
-f1.close()
+with open('files/ainsulin-seq-clean.txt','w') as f1:
+    f1.write(human_preproinsulin[89:111])
