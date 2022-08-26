@@ -9,7 +9,7 @@ The same user-data file will deploy website files on the instance and run SQL sc
 This diagram summarizes the activities that you will complete in this activity.
 
 
-![architectural diagram](https://labs.vocareum.com/web/1998075/857430.0/ASNLIB/public/docs/lang/en-us/images/image4.png)
+![architectural diagram](image4.png)
 
  
 
