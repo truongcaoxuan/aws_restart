@@ -27,9 +27,9 @@ The lab will demonstrate how to:
 
 ## Task 6: Create a NAT Gateway
 
-## Launch an Instance in the Private Subnet
+## Task 7: Launch an Instance in the Private Subnet
 
-## Launch an Instance in the Private Subnet
+## Task 8: Launch an Instance in the Private Subnet
 User Data (Under  Advanced Details): Paste this script:
 ```
 #!/bin/bash
@@ -38,16 +38,16 @@ echo 'lab-password' | passwd ec2-user --stdin
 sed -i 's|[#]*PasswordAuthentication no|PasswordAuthentication yes|g' /etc/ssh/sshd_config
 systemctl restart sshd.service
 ```
-## Log into the Bastion Server :: use PuTTY to SSH to Amazon EC2 instances
+## Task 9: Log into the Bastion Server :: use PuTTY to SSH to Amazon EC2 instances
 
-## Log into the Private Instance :: Using SSH to Connect
+## Task 10: Log into the Private Instance :: Using SSH to Connect
 ```
 ssh PRIVATE-IP
 ```
 - If you are prompted with "Are you sure", enter: yes
 - When prompted for a password, enter: lab-password
 
-## Test the NAT Gateway
+## Task 11: Test the NAT Gateway
 ```
 ping -c 3 amazon.com
 ```
