@@ -8,7 +8,7 @@
 The diagram here shows the architecture of the Sales Analysis Report solution and illustrates the order in which actions occur.
 
 The function steps shown in the diagram above are as follows:
-
+![diagram](lambda-activity-architecture.png)
 - [1] An Amazon CloudWatch event triggers the salesAnalysisReport Lambda function at 8:00pm every day, Monday through Saturday.
 - [2] The salesAnalysisReport Lambda function invokes another Lambda function, salesAnalysisReportDataExtractor, to retrieve the report data.
 - [3] The salesAnalysisReportDataExtractor function runs an analytical query against the Café database (cafe_db).
