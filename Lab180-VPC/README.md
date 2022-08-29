@@ -14,22 +14,22 @@ The lab will demonstrate how to:
 
 ![architecture-lab-vpc](architecture-lab-vpc.png)
 
-## Task 1: Create a VPC
-## Task 2: Create Subnets
+### Task 1: Create a VPC
+### Task 2: Create Subnets
 - Create a Public Subnet
 - Create a Private Subnet
 
-## Task 3: Create an Internet Gateway
+### Task 3: Create an Internet Gateway
 
-## Task 4: Configure Route Tables
+### Task 4: Configure Route Tables
 
-## Task 5: Launch a Bastion Server in the Public Subnet
+### Task 5: Launch a Bastion Server in the Public Subnet
 
-## Task 6: Create a NAT Gateway
+### Task 6: Create a NAT Gateway
 
-## Task 7: Launch an Instance in the Private Subnet
+### Task 7: Launch an Instance in the Private Subnet
 
-## Task 8: Launch an Instance in the Private Subnet
+### Task 8: Launch an Instance in the Private Subnet
 User Data (Under  Advanced Details): Paste this script:
 ```
 #!/bin/bash
@@ -38,16 +38,16 @@ echo 'lab-password' | passwd ec2-user --stdin
 sed -i 's|[#]*PasswordAuthentication no|PasswordAuthentication yes|g' /etc/ssh/sshd_config
 systemctl restart sshd.service
 ```
-## Task 9: Log into the Bastion Server :: use PuTTY to SSH to Amazon EC2 instances
+### Task 9: Log into the Bastion Server :: use PuTTY to SSH to Amazon EC2 instances
 
-## Task 10: Log into the Private Instance :: Using SSH to Connect
+### Task 10: Log into the Private Instance :: Using SSH to Connect
 ```
 ssh PRIVATE-IP
 ```
 - If you are prompted with "Are you sure", enter: yes
 - When prompted for a password, enter: lab-password
 
-## Task 11: Test the NAT Gateway
+### Task 11: Test the NAT Gateway
 ```
 ping -c 3 amazon.com
 ```
