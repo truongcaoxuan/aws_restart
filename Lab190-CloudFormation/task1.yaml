@@ -4,6 +4,7 @@ Description: Lab template
 # Lab VPC with public subnet and Internet Gateway
 
 Parameters:
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html
 
   LabVpcCidr:
     Type: String
@@ -16,11 +17,14 @@ Parameters:
   AmazonLinuxAMIID:
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+    # https://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/
 
 Resources:
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html
+
 ###########
 # S3 Bucket
-###########
+########### https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-s3.html
 
   MyS3Bucket:
     Type: AWS::S3::Bucket
@@ -147,6 +151,7 @@ Resources:
 ###########
 
 Outputs:
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html
 
   LabVPCDefaultSecurityGroup:
     Value: !Sub ${LabVPC.DefaultSecurityGroup}
