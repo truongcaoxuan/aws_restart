@@ -88,3 +88,14 @@ You should see only two instances returned by this command, both with a Project 
 ]
 ```
 
+## Changing Version Tag for Development Process
+run this command
+```
+./change-resource-tags.sh
+```
+### To verify that the version number on these instances has been incremented and that other non-development boxes in the ERPSystem project have been unaffected:
+```
+aws ec2 describe-instances \
+--filter "Name=tag:Project,Values=ERPSystem" \
+--query 'Reservations[*].Instances[*].{ID:InstanceId, AZ:Placement.AvailabilityZone, Project:Tags[?Key==`Project`] |[0].Value,Environment:Tags[?Key==`Environment`] | [0].Value,Version:Tags[?Key==`Version`] | [0].Value}'
+```
