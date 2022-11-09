@@ -1,0 +1,5 @@
+# Use the following commands to start a stress test. 
+# This test increases the load on the web server CPU
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install stress -y
+stress --cpu 1 --timeout 600
