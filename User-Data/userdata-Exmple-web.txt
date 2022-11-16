@@ -1,0 +1,13 @@
+#!/bin/bash -ex
+yum -y update
+amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+yum install -y httpd mariadb-server
+chkconfig httpd on
+service httpd start
+cd /home/ec2-user
+wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACACAD-2/21-course-project/s3/Countrydatadump.sql
+chown ec2-user:ec2-user Countrydatadump.sql
+cd /var/www/html
+wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACACAD-2/21-course-project/s3/Example.zip
+unzip Example.zip -d /var/www/html/
+chown -R ec2-user:ec2-user /var/www/html
